@@ -23,11 +23,9 @@ def create_dard(type_card, name, father_name, date_print, QR_code, path_poto, sa
 
     reshaped_text = arabic_reshaper.reshape(text)
     bidi_text = get_display(reshaped_text)
-    x=730-(len(bidi_text)*15)
 
     reshaped_text2 = arabic_reshaper.reshape(text2)
     bidi_text2 = get_display(reshaped_text2)
-    x2 = 730-(len(bidi_text2)*20)
 
     reshaped_text3 = arabic_reshaper.reshape(year)
     bidi_text3 = get_display(reshaped_text3)
@@ -38,11 +36,11 @@ def create_dard(type_card, name, father_name, date_print, QR_code, path_poto, sa
     reshaped_text5 = arabic_reshaper.reshape(day)
     bidi_text5 = get_display(reshaped_text5)
 
-    draw.text((x, 230), bidi_text, (50, 50, 50), font=font)
-    draw.text((x2, 300), bidi_text2, (50, 50, 50), font=font)
-    draw.text((440, 390), bidi_text3, (50, 50, 50), font=font)
-    draw.text((580, 390), bidi_text4, (50, 50, 50), font=font)
-    draw.text((690, 390), bidi_text5, (50, 50, 50), font=font)
+    draw.text((730, 230), bidi_text, (50, 50, 50), font=font, anchor="rt")
+    draw.text((730, 300), bidi_text2, (50, 50, 50), font=font, anchor="rt")
+    draw.text((440, 390), bidi_text3, (50, 50, 50), font=font, anchor="rt")
+    draw.text((580, 390), bidi_text4, (50, 50, 50), font=font, anchor="rt")
+    draw.text((690, 390), bidi_text5, (50, 50, 50), font=font, anchor="rt")
 
     qr = qrcode.make(QR_code)
     qr.save('qr.png')
