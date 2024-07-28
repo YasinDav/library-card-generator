@@ -38,9 +38,9 @@ def create_dard(type_card, name, father_name, date_print, QR_code, path_poto, sa
 
     draw.text((730, 230), bidi_text, (50, 50, 50), font=font, anchor="rt")
     draw.text((730, 300), bidi_text2, (50, 50, 50), font=font, anchor="rt")
-    draw.text((440, 390), bidi_text3, (50, 50, 50), font=font, anchor="rt")
-    draw.text((580, 390), bidi_text4, (50, 50, 50), font=font, anchor="rt")
-    draw.text((690, 390), bidi_text5, (50, 50, 50), font=font, anchor="rt")
+    draw.text((440, 390), bidi_text3, (50, 50, 50), font=font)
+    draw.text((580, 390), bidi_text4, (50, 50, 50), font=font)
+    draw.text((690, 390), bidi_text5, (50, 50, 50), font=font)
 
     qr = qrcode.make(QR_code)
     qr.save('qr.png')
